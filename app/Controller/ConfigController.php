@@ -1,36 +1,28 @@
 <?php
 
 declare(strict_types=1);
-/**
- * This file is part of Hyperf.
- *
- * @link     https://www.hyperf.io
- * @document https://hyperf.wiki
- * @contact  group@hyperf.io
- * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
- * @AutoController();
- */
+
 namespace App\Controller;
 
 use Hyperf\Config\Annotation\Value;
-use Hyperf\HttpServer\Annotation\AutoController;
-
+use Hyperf\HttpServer\Annotation\Controller;
+use Hyperf\HttpServer\Annotation\GetMapping;
+use Hyperf\HttpServer\Contract\RequestInterface;
+use Hyperf\HttpServer\Contract\ResponseInterface;
 
 /**
- * Class ConfigController
- * @package App\Controller
  * @AutoController()
  */
 class ConfigController
 {
-
     /**
-     * @Value(config.app_name)
+     * @Value("databases.default.driver")
      */
-    private $appName;
+    private $config;
 
     public function index()
     {
-        return $this->appName;
+        // 获取 autoload/databases.php 里的配置
+        return $this->config;
     }
 }
