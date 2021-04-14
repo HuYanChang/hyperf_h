@@ -13,8 +13,14 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Hyperf\Config\Annotation\Value;
-use Hyperf\HttpServer\Annotation\Controller;
+use Hyperf\HttpServer\Annotation\AutoController;
 
+
+/**
+ * Class ConfigController
+ * @package App\Controller
+ * @AutoController()
+ */
 class ConfigController
 {
 
