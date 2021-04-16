@@ -26,4 +26,6 @@ class User extends Model
      * @var array
      */
     protected $casts = ['id' => 'integer', 'sex' => 'integer'];
+
+    protected $primaryKey = 'id';
 }
