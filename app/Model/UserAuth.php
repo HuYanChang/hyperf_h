@@ -6,23 +6,16 @@ namespace App\Model;
 use Hyperf\DbConnection\Model\Model;
 /**
  * @property $id
- * @property $username
- * @property $nickname
- * @property $mobile
- * @property $create_time
- * @property $birthday
- * @property $create_at
- * @property $update_at
- * @property $sex
+ * @property $type
  */
-class User extends Model
+class UserAuth extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'user';
+    protected $table = 'user_auth';
     /**
      * The attributes that are mass assignable.
      *
@@ -34,7 +27,5 @@ class User extends Model
      *
      * @var array
      */
-    protected $casts = ['id' => 'integer', 'sex' => 'integer'];
-
-    protected $primaryKey = 'id';
+    protected $casts = [];
 }
