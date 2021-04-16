@@ -13,7 +13,7 @@ use Hyperf\DbConnection\Model\Model;
  * @property $birthday
  * @property $create_at
  * @property $update_at
- * @property $sex
+ * @property $gender
  */
 class User extends Model
 {
