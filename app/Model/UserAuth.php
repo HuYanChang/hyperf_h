@@ -27,5 +27,5 @@ class UserAuth extends Model
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = ['id' => 'integer', 'type' => 'integer'];
 }
